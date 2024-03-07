@@ -8,9 +8,12 @@ public class playerMovement : MonoBehaviour
 {
     CharacterController controller;
     public float speed = 6.0f;
+    //public float rotationSpeed = 5f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     private Vector3 moveDir = Vector3.zero;
+
+    //Transform playerTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +24,12 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         if (controller.isGrounded)
         {
             moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDir = transform.TransformDirection(moveDir);
             moveDir *= speed;
 
             if (Input.GetButton("Jump"))
@@ -33,6 +39,9 @@ public class playerMovement : MonoBehaviour
         }
 
         moveDir.y -= gravity * Time.deltaTime;
+
         controller.Move(moveDir * Time.deltaTime);
+        //transform.Rotate(0, Input.GetAxis("Mouse X") * rotationSpeed, 0);
+        
     }
 }
