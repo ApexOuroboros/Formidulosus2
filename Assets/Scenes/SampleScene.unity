@@ -5691,6 +5691,7 @@ MonoBehaviour:
   - {fileID: 181792072}
   - {fileID: 1911531504}
   speed: 5
+  rotSpeed: 1
 --- !u!1001 &1326619453
 PrefabInstance:
   m_ObjectHideFlags: 0
