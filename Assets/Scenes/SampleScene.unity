@@ -176,6 +176,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8da171407a87a49b7bb5b3b0918e36, type: 3}
+--- !u!1 &124806960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7713031340843852951, guid: dfe51c72aa9d2d24a920623fa709c536, type: 3}
+  m_PrefabInstance: {fileID: 2004674125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &162650642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -233,6 +238,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfe51c72aa9d2d24a920623fa709c536, type: 3}
+--- !u!1 &181792072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7713031340843852951, guid: dfe51c72aa9d2d24a920623fa709c536, type: 3}
+  m_PrefabInstance: {fileID: 1326619453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &394905636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -337,6 +347,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1686294621}
   mouseSens: 2
+--- !u!1 &423677971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7713031340843852951, guid: dfe51c72aa9d2d24a920623fa709c536, type: 3}
+  m_PrefabInstance: {fileID: 3562385923704641340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &429820020
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,6 +5443,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &814101690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7713031340843852951, guid: dfe51c72aa9d2d24a920623fa709c536, type: 3}
+  m_PrefabInstance: {fileID: 162650642}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5577,6 +5597,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfe51c72aa9d2d24a920623fa709c536, type: 3}
+--- !u!1 &1012585853 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7713031340843852951, guid: dfe51c72aa9d2d24a920623fa709c536, type: 3}
+  m_PrefabInstance: {fileID: 977185624}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1092902698
 GameObject:
   m_ObjectHideFlags: 0
@@ -5588,6 +5613,7 @@ GameObject:
   - component: {fileID: 1092902699}
   - component: {fileID: 1092902700}
   - component: {fileID: 1092902701}
+  - component: {fileID: 1092902702}
   m_Layer: 0
   m_Name: enemyObject
   m_TagString: Enemy
@@ -5645,6 +5671,26 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1092902702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092902698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d037d7fd2f2e07342b2168195b58b34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 423677971}
+  - {fileID: 1012585853}
+  - {fileID: 814101690}
+  - {fileID: 124806960}
+  - {fileID: 181792072}
+  - {fileID: 1911531504}
+  speed: 5
 --- !u!1001 &1326619453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6183,6 +6229,11 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 35471c036ebb09642ac5b2c6753a7c8e, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &1911531504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7713031340843852951, guid: dfe51c72aa9d2d24a920623fa709c536, type: 3}
+  m_PrefabInstance: {fileID: 1507679264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1912475316
 PrefabInstance:
   m_ObjectHideFlags: 0
