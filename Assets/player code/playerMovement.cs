@@ -15,10 +15,23 @@ public class playerMovement : MonoBehaviour
 
     //Transform playerTransform;
 
+    public float threshold;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
+    private void FixedUpdate()
+    {
+        if (transform.position.y < threshold)
+        {
+            transform.position = new Vector3(125f, 6.5f, 115f);
+        }
     }
 
     // Update is called once per frame
