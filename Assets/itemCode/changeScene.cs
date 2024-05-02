@@ -8,6 +8,9 @@ public class changeScene : MonoBehaviour
     
     public List<GameObject> ShipPartsArray = new List<GameObject>();
 
+    private List<GameObject> shipPartsArrayPriv = new List<GameObject>();
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +21,7 @@ public class changeScene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ShipPartsArray.Count == 0)
+        if(ShipPartsArray.Count == 0 || shipPartsArrayPriv.Count == 5)
         {
             SceneManager.LoadScene("end");
         }
@@ -31,6 +34,7 @@ public class changeScene : MonoBehaviour
             if (other.gameObject.tag.Equals("Part"))
             {
                 Destroy(other.gameObject);
+                shipPartsArrayPriv.Add(other.gameObject);
                 ShipPartsArray.Remove(gameObject);
             }
         }
