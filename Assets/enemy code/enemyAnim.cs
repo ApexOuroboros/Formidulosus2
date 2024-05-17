@@ -17,10 +17,20 @@ public class enemyAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(speed >= 0.1)
+        if(speed <= 0.1)
         {
             anim.SetBool("isWalking", false);
             anim.SetBool("isIdle",  true);
+        }
+        else if(speed > 0.1 || speed <= 5.1)
+        {
+            anim.SetBool("isWalking", true) ;
+            anim.SetBool("isIdle", false) ;
+        }
+        else if( speed > 5.1 ||  speed <= 10)
+        {
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isRunning", true ) ;
         }
     }
 }
