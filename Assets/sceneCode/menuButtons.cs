@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class menuButtons : MonoBehaviour
 {
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
