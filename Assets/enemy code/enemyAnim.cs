@@ -7,6 +7,7 @@ public class enemyAnim : MonoBehaviour
     Animator anim;
 
     public float speed;
+    public float maxSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,7 @@ public class enemyAnim : MonoBehaviour
             anim.SetBool("isWalking", true) ;
             anim.SetBool("isIdle", false) ;
         }
-        else if( speed > 5.1 ||  speed <= 10)
+        else if( speed > 5.1 ||  speed == maxSpeed)
         {
             anim.SetBool("isWalking", false);
             anim.SetBool("isRunning", true ) ;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class FollowWP : MonoBehaviour
@@ -38,4 +39,13 @@ public class FollowWP : MonoBehaviour
         this.transform.Translate(0, 0, speed * Time.deltaTime);
 
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            speed = 0f;
+        }
+    }
+
 }

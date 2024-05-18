@@ -756,10 +756,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1867898031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -330, y: 222.05298}
-  m_SizeDelta: {x: 565.89, y: 93.8941}
+  m_AnchorMin: {x: 0.048882354, y: 0.74300003}
+  m_AnchorMax: {x: 0.46426475, y: 0.8831712}
+  m_AnchoredPosition: {x: 1, y: 0.5529785}
+  m_SizeDelta: {x: 1.8900146, y: -5.105896}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142391674
 MonoBehaviour:
@@ -1368,10 +1368,10 @@ RectTransform:
   - {fileID: 6563098}
   m_Father: {fileID: 1867898031}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -314, y: -82.08574}
-  m_SizeDelta: {x: 425.4217, y: 286.1715}
+  m_AnchorMin: {x: 0.11220589, y: 0.17441444}
+  m_AnchorMax: {x: 0.4284706, y: 0.58275676}
+  m_AnchoredPosition: {x: -1.5, y: 2.9142456}
+  m_SizeDelta: {x: -3.578308, y: -3.8284912}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1375039638
 MonoBehaviour:
@@ -2330,6 +2330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  maxSpeed: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
