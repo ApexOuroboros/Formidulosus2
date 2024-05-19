@@ -29,14 +29,18 @@ public class changeScene : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
         for(int i = 0; i < ShipPartsArray.Count; i++)
         {
             if (other.gameObject.tag.Equals("Part"))
             {
-                Destroy(other.gameObject);
+                
                 shipPartsArrayPriv.Add(other.gameObject);
-                ShipPartsArray.Remove(gameObject);
+                ShipPartsArray.Remove(other.gameObject);
+
+                other.gameObject.SetActive(false);
             }
         }
+        
     }
 }

@@ -49,13 +49,13 @@ public class pickup : MonoBehaviour
             {
                 objTransform.parent = camTransform;
                 objRigidbody.useGravity = false;
-                isInteract=true;
+                isPickup = true;
             }
             if (Input.GetMouseButtonUp(0))
             {
                 objTransform.parent = null;
                 objRigidbody.useGravity = true;
-                isInteract=false;
+                isPickup=false;
             }
             if(isPickup == true)
             {
