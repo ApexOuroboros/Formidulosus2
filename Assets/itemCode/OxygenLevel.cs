@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CapsuleCollider))]
 [RequireComponent(typeof(Rigidbody))]
 
 public class OxygenLevel : MonoBehaviour
 {
+    public Image oxyBar;
+
+    private bool isDead = false;
+
+    public GameManager gameManager;
+
     HashSet<Atmosphere> _oxygenSources = new HashSet<Atmosphere>();
 
     [SerializeField][Range(0, 1)] float _oxygen = 1f;
@@ -14,6 +21,16 @@ public class OxygenLevel : MonoBehaviour
     [SerializeField][Min(0)] float _oxygenConsumption = 0.05f;
     [SerializeField] AnimationCurve _oxygenLevelViability = new AnimationCurve(new Keyframe(0, 0, 0, 0), new Keyframe(1, 1, 3.3f, 0));
     const float k_breathing_tick_rate = 1f / 3f;
+
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+        oxyBar.fillAmount = Mathf.Clamp(_oxygen, 0, 1);
+    }
 
     void OnEnable()
     {
@@ -57,12 +74,17 @@ public class OxygenLevel : MonoBehaviour
         float oxygenConsumed = _oxygenConsumption * k_breathing_tick_rate * (1f - oxygenAround);
         _oxygen = Mathf.Clamp01(_oxygen - oxygenConsumed);
 
-        if (!(_oxygen > 0))
+        if (_oxygen == 0 && !isDead)
+        {
             OnAsphyxiation();
+        }
+            
     }
     void OnAsphyxiation()
     {
         Debug.Log($"{gameObject.name} is x__x (asphyxiation)", gameObject);
-        gameObject.SetActive(false);
+
+        isDead = true;
+        gameManager.GameOver();
     }
 }
