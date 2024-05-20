@@ -22,5 +22,6 @@ public class GameManager : MonoBehaviour
     {
         Cursor.visible = true;
         gameOverUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
